@@ -1,5 +1,6 @@
 const path = require('path');
 const { ALIASES, IS_RELEASE, MINIMIZERS, plugins, rules } = require('./constants');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (env) {
     const base = env && env.base && env.base !== true ? `/${env.base}/` : '/';
@@ -35,8 +36,8 @@ module.exports = function (env) {
         },
         externals: [
             {
-                react: 'react',
-                'react-dom': 'react-dom',
+                // react: 'react',
+                // 'react-dom': 'react-dom',
                 'react-router-dom': 'react-router-dom',
                 'react-router': 'react-router',
                 mobx: 'mobx',
@@ -55,6 +56,28 @@ module.exports = function (env) {
             /^@deriv\/reports\/.+$/,
         ],
         target: 'web',
-        plugins: plugins(base, false),
+        plugins: [
+            ...plugins(base, false),
+            new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, '../public/index.html'),
+            }),
+        ],
+        devServer: {
+            static: {
+                directory: path.join(__dirname, '../dist'),
+            },
+            compress: true,
+            port: 8443,
+            host: 'localhost',
+            server: {
+                type: 'https',
+            },
+            hot: true,
+            open: true,
+            historyApiFallback: true,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        },
     };
 };

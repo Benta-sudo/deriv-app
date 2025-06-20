@@ -143,29 +143,26 @@
 
         <meta
             name="description"
-            content=" Deriv gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stocks, indices, and commodities."
+            content="Osamhnr gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stocks, indices, and commodities."
         />
         <meta
             name="keywords"
             content=" digital options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, digital options strategy, binary broker, binary bet, digital options trading platform, binary strategy, finance, stocks, investment, trading"
         />
-        <meta name="author" content="Deriv" />
+        <meta name="author" content="Osamhnr" />
         <!-- TODO: iOS zoom bug for input elements means we'll get a lower user accessibility score since we're not allowing app.deriv.com to be scalable on mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="theme-color" content="#414652" />
-        <meta name="dcterms.rightsHolder" content="Deriv" />
-        <meta name="dcterms.rights" content="Deriv" />
+        <meta name="dcterms.rightsHolder" content="Osamhnr" />
+        <meta name="dcterms.rights" content="Osamhnr" />
         <meta name="google-site-verification" content="g5u3TyEdmYJ_HKZ6EmpW1nlKwD4XPVeLMhN9leeMfuw" />
         <meta
             property="og:description"
-            content="Deriv gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stocks, indices, and commodities."
+            content="Osamhnr gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stocks, indices, and commodities."
         />
-        <meta property="og:title" content="Deriv" />
+        <meta property="og:title" content="Osamhnr" />
         <meta property="og:type" content="website" />
-        <meta
-            property="og:image"
-            content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR3qsyDtQ_1mlX1AoeV963gFP0UZBTcJOcdK0G802Vfg&s"
-        />
+        <meta property="og:image" content="/public/images/app/common/logo.svg" />
         <meta name="google" content="notranslate" />
         <meta name="referrer" content="origin" />
 
@@ -176,7 +173,7 @@
         <link rel="alternate" hreflang="en" href="https://app.deriv.com" />
         <link rel="canonical" href="https://app.deriv.com" />
 
-        <title>Deriv App | Deriv</title>
+        <title>Osamhnr App | Osamhnr</title>
         <meta charset="UTF-8" />
         <meta name="google-site-verification" content="g5u3TyEdmYJ_HKZ6EmpW1nlKwD4XPVeLMhN9leeMfuw" />
     </head>
@@ -273,7 +270,7 @@
                         i(['off', c.call(arguments)]);
                     },
                     get: function () {
-                        if (!e._h) throw new Error('[LiveChatWidget] You can’t use getters before load.');
+                        if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load.");
                         return i(['get', c.call(arguments)]);
                     },
                     call: function () {
@@ -281,13 +278,14 @@
                     },
                     init: function () {
                         var n = t.createElement('script');
-                        (n.async = !0),
-                            (n.type = 'text/javascript'),
-                            (n.src = 'https://cdn.livechatinc.com/tracking.js'),
-                            t.head.appendChild(n);
+                        n.async = true;
+                        n.type = 'text/javascript';
+                        n.src = 'https://cdn.livechatinc.com/tracking.js';
+                        t.head.appendChild(n);
                     },
                 };
-                !n.__lc.asyncInit && e.init(), (n.LiveChatWidget = n.LiveChatWidget || e);
+                if (!n.__lc.asyncInit) e.init();
+                n.LiveChatWidget = n.LiveChatWidget || e;
             })(window, document, [].slice);
         </script>
         <!-- End LiveChat script -->

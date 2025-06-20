@@ -43,6 +43,7 @@ const svg_file_loaders = [
         options: {
             name: '[path][name].[contenthash].[ext]',
             outputPath: 'cashier',
+            esModule: false,
         },
     },
 ];

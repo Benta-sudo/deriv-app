@@ -1,34 +1,34 @@
 {
-    "brand_name": "Deriv",
-    "domain_name": "Deriv.com",
+    "brand_name": "Osamhnr",
+    "domain_name": "Osamhnr.com",
     "legal_entities": {
-        "fx": "Deriv (FX) Ltd",
-        "malta": "Deriv (Europe) Limited",
-        "maltainvest": "Deriv Investments (Europe) Limited",
-        "mx": "Deriv (MX) Ltd",
-        "samoa": "Deriv Capital International Ltd",
-        "svg": "Deriv (SVG) LLC",
-        "v": "Deriv (V) Ltd"
+        "fx": "Osamhnr (FX) Ltd",
+        "malta": "Osamhnr (Europe) Limited",
+        "maltainvest": "Osamhnr Investments (Europe) Limited",
+        "mx": "Osamhnr (MX) Ltd",
+        "samoa": "Osamhnr Capital International Ltd",
+        "svg": "Osamhnr (SVG) LLC",
+        "v": "Osamhnr (V) Ltd"
     },
     "platforms": {
         "trader": {
-            "name": "Deriv Trader",
+            "name": "Osamhnr Trader",
             "icon": "IcRebrandingDerivTrader"
         },
         "dbot": {
-            "name": "Deriv Bot",
+            "name": "Osamhnr Bot",
             "icon": "IcRebrandingDerivBot"
         },
         "mt5": {
-            "name": "Deriv MT5",
+            "name": "Osamhnr MT5",
             "icon": "IcRebrandingDmt5"
         },
         "ctrader": {
-            "name": "Deriv cTrader",
+            "name": "Osamhnr cTrader",
             "icon": "IcRebrandingCtrader"
         },
         "dxtrade": {
-            "name": "Deriv X",
+            "name": "Osamhnr X",
             "icon": "IcRebrandingDxtrade"
         },
         "smarttrader": {
@@ -36,18 +36,18 @@
             "icon": "IcRebrandingSmarttrader"
         },
         "go": {
-            "name": "Deriv GO",
-            "icon": "IcRebrandingDerivGo"
+            "name": "Osamhnr GO",
+            "icon": "DerivGo"
         }
     },
     "platforms_appstore": {
         "trader": {
-            "name": "Deriv Trader",
+            "name": "Osamhnr Trader",
             "icon": "DTrader",
             "availability": "All"
         },
         "dbot": {
-            "name": "Deriv Bot",
+            "name": "Osamhnr Bot",
             "icon": "DBot",
             "availability": "Non-EU"
         },
@@ -57,7 +57,7 @@
             "availability": "Non-EU"
         },
         "go": {
-            "name": "Deriv GO",
+            "name": "Osamhnr GO",
             "icon": "DerivGo",
             "availability": "Non-EU"
         },

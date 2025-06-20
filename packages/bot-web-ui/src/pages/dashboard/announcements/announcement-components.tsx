@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Text } from '@deriv/components';
-import { LabelPairedCircleInfoCaptionBoldIcon } from '@deriv/quill-icons';
+import { LabelPairedCircleInfoCaptionBoldIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const IconAnnounce = ({ announce }: { announce: boolean }) => (
     <>

@@ -95,13 +95,13 @@ const rules = (is_test_env = false) => [
     },
     {
         test: /\.svg$/,
-        exclude: /node_modules/,
-        include: /public\//,
+        include: path.resolve(__dirname, '../src/public'),
         use: svg_file_loaders,
+        type: 'javascript/auto',
     },
     {
         test: /\.svg$/,
-        exclude: /node_modules|public\//,
+        exclude: [/node_modules/, path.resolve(__dirname, '../src/public')],
         use: svg_loaders,
     },
     is_test_env

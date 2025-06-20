@@ -23,7 +23,8 @@
         "removeComments": true, // Disable emitting comments
         "skipDefaultLibCheck": true, // Skip type checking .d.ts files that are included with TypeScript
         "downlevelIteration": true,
-        "paths": { "@deriv/*": ["./packages/*/src"] }
+        "paths": { "@deriv/*": ["./packages/*/src"] },
+        "typeRoots": ["./node_modules/@types", "./@types"]
     },
     "include": ["utils.d.ts"],
     "ts-node": {

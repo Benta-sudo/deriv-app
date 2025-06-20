@@ -6,7 +6,7 @@
         "paths": {
             "@deriv/*": ["../*/src"]
         },
-        "typeRoots": ["./types", "@types"]
+        "typeRoots": ["./node_modules/@types", "./@types"]
     },
     "include": [
         "src",

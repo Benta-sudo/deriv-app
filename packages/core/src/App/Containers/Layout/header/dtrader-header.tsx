@@ -57,12 +57,12 @@ const DTraderHeader = observer(() => {
         if (!has_any_real_account && is_virtual) {
             toggleReadyToDepositModal();
         } else {
-            history.push(routes.cashier_deposit);
+            history.push(routes.cashier_deposit as TRoute);
         }
     };
 
-    const filterPlatformsForClients = payload =>
-        payload.filter(config => {
+    const filterPlatformsForClients = (payload: any[]) =>
+        payload.filter((config: any) => {
             if (config.link_to === routes.mt5) {
                 return !is_logged_in || is_mt5_allowed;
             }
@@ -89,11 +89,13 @@ const DTraderHeader = observer(() => {
                     {!isDesktop ? (
                         <React.Fragment>
                             {is_from_tradershub_os ? (
+                                // @ts-ignore
                                 <ToggleMenuDrawerAccountsOS
                                     platform_config={filterPlatformsForClients(platform_config)}
                                 />
                             ) : (
                                 <>
+                                    {/* @ts-ignore */}
                                     <ToggleMenuDrawer platform_config={filterPlatformsForClients(platform_config)} />
                                     {header_extension && is_logged_in && (
                                         <div className='header__menu-left-extensions'>{header_extension}</div>
@@ -106,6 +108,7 @@ const DTraderHeader = observer(() => {
                             <DerivShortLogo />
                             <div className='header__divider' />
                             <TradersHubHomeButton />
+                            {/* @ts-ignore */}
                             <PlatformSwitcher
                                 app_routing_history={app_routing_history}
                                 platform_config={filterPlatformsForClients(platform_config)}

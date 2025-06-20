@@ -1,11 +1,24 @@
 declare module 'react-drag-drawer' {
-    export default function DragDrawer(
-        props: React.PropsWithChildren<{
-            direction: 'left' | 'right';
-            open: boolean;
-            onRequestClose: () => void;
-            containerElementClass: string;
-            modalElementClass: string;
-        }>
-    ): JSX.Element;
+    import * as React from 'react';
+
+    interface DrawerProps {
+        open: boolean;
+        onRequestClose: () => void;
+        children?: React.ReactNode;
+        direction?: 'left' | 'right' | 'top' | 'bottom';
+        width?: number | string;
+        height?: number | string;
+        zIndex?: number;
+        className?: string;
+        containerClassName?: string;
+        overlayClassName?: string;
+        modalElementClass?: string;
+        dragHandleClass?: string;
+        allowClose?: boolean;
+        noTouchOpen?: boolean;
+        noTouchClose?: boolean;
+    }
+
+    const Drawer: React.FC<DrawerProps>;
+    export default Drawer;
 }

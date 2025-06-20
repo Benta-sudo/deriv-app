@@ -144,6 +144,16 @@ module.exports = function (env) {
                     test: /\.svg$/,
                     use: svg_loaders,
                 },
+                {
+                    exclude: [/node_modules/, /public\//],
+                    test: /\.svg$/,
+                    use: svg_loaders,
+                },
+                {
+                    exclude: /node_modules/,
+                    test: /\.svg$/,
+                    type: 'asset/resource',
+                },
             ],
         },
         optimization: {

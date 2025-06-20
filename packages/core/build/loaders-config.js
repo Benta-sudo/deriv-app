@@ -37,6 +37,7 @@ const svg_file_loaders = [
         loader: 'file-loader',
         options: {
             name: '[path][name].[contenthash].[ext]',
+            esModule: false,
         },
     },
 ];

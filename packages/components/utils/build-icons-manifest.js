@@ -40,10 +40,15 @@ function buildIconsManifest() {
 
     validateIcons(svgs_map);
 
-    const buffer = ['// auto-generated file. DO NOT MODIFY.', ''];
-    buffer.push(`module.exports = ${JSON.stringify(svgs_map)}`);
+    const buffer = [
+        '// auto-generated file. DO NOT MODIFY.',
+        '',
+        'const icons_manifest = ' + JSON.stringify(svgs_map) + ';',
+        '',
+        'export = icons_manifest;',
+    ];
 
-    fs.writeFileSync(path.join(__dirname, '../src/components/icon/icons-manifest.js'), buffer.join(EOL) + EOL);
+    fs.writeFileSync(path.join(__dirname, '../src/components/icon/icons-manifest.ts'), buffer.join(EOL) + EOL);
 }
 
 module.exports.buildIconsManifest = buildIconsManifest;

@@ -6,6 +6,7 @@ import { routes } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { Localize } from '@deriv/translations';
 import { useIsHubRedirectionEnabled } from '@deriv/hooks';
+import { TRoute } from '@deriv/shared';
 
 const TradersHubHomeButton = observer(() => {
     const { ui, client } = useStore();
@@ -38,8 +39,7 @@ const TradersHubHomeButton = observer(() => {
         <div
             data-testid='dt_traders_hub_home_button'
             className={classNames('traders-hub-header__tradershub', {
-                'traders-hub-header__tradershub--active':
-                    pathname === routes.traders_hub || pathname === routes.traders_hub_v2,
+                'traders-hub-header__tradershub--active': pathname === routes.traders_hub,
             })}
             onClick={handleTradershubRedirect}
         >

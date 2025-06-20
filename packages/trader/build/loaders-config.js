@@ -37,6 +37,9 @@ const svg_file_loaders = [
         loader: 'file-loader',
         options: {
             name: '[path][name].[ext]',
+            outputPath: 'images/',
+            publicPath: '../images/',
+            esModule: false,
         },
     },
 ];
@@ -47,6 +50,7 @@ const svg_loaders = [
         options: {
             cacheDirectory: true,
             rootMode: 'upward',
+            presets: ['@babel/preset-react', '@babel/preset-typescript'],
         },
     },
     {
@@ -58,8 +62,41 @@ const svg_loaders = [
                     { removeTitle: false },
                     { removeUselessStrokeAndFill: false },
                     { removeUknownsAndDefaults: false },
+                    { removeViewBox: false },
+                    { removeEmptyAttrs: false },
+                    { removeHiddenElems: false },
+                    { removeEmptyText: false },
+                    { removeEmptyContainers: false },
+                    { removeUnusedNS: false },
+                    { removeDesc: false },
+                    { removeMetadata: false },
+                    { removeComments: false },
+                    { removeDoctype: false },
+                    { removeXMLProcInst: false },
+                    { removeEditorsNSData: false },
+                    { removeXMLNS: false },
+                    { removeDimensions: false },
+                    { removeAttrs: false },
+                    { removeElementsByAttr: false },
+                    { removeStyleElement: false },
+                    { removeScriptElement: false },
                 ],
                 floatPrecision: 2,
+                multipass: true,
+            },
+            svgoConfig: {
+                plugins: [
+                    {
+                        name: 'preset-default',
+                        params: {
+                            overrides: {
+                                removeViewBox: false,
+                                removeUnknownsAndDefaults: false,
+                                removeUselessStrokeAndFill: false,
+                            },
+                        },
+                    },
+                ],
             },
         },
     },

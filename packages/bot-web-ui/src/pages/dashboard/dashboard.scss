@@ -437,3 +437,135 @@
         margin-inline-start: 0.4rem;
     }
 }
+
+// OAuth Dashboard Styles
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #e6e6e6;
+
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .logout-button {
+            background-color: #ff4444;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #cc0000;
+            }
+        }
+    }
+
+    .dashboard-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .user-info-card,
+        .balance-card,
+        .features-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e6e6e6;
+
+            h3 {
+                color: #333;
+                margin-top: 0;
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+                border-bottom: 1px solid #e6e6e6;
+                padding-bottom: 0.5rem;
+            }
+
+            .user-details,
+            .balance-details {
+                p {
+                    margin: 0.5rem 0;
+                    color: #666;
+                    font-size: 1rem;
+
+                    strong {
+                        color: #333;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 1.5rem;
+                color: #666;
+
+                li {
+                    margin: 0.5rem 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .balance-card {
+            .balance-details {
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #2a9d8f;
+                }
+            }
+        }
+    }
+
+    // Loading and Error States
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #666;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    button {
+        display: block;
+        margin: 1rem auto;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}

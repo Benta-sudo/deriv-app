@@ -147,28 +147,17 @@ const AppWrapper = observer(() => {
                         'main__container--active': active_tour && active_tab === DASHBOARD && !is_desktop,
                     })}
                 >
-                    <Tabs
-                        active_index={active_tab}
-                        className='main__tabs'
-                        onTabItemChange={onEntered}
-                        onTabItemClick={handleTabChange}
-                        top
-                    >
-                        <div
-                            icon='IcDashboardComponentTab'
-                            label={<Localize i18n_default_text='Dashboard' />}
-                            id='id-dbot-dashboard'
-                        >
+                    <Tabs active_index={active_tab} className='main__tabs' onTabItemClick={handleTabChange} top>
+                        {/* @ts-ignore */}
+                        <div icon='IcDashboardComponentTab' label={localize('Dashboard')} id='id-dbot-dashboard'>
                             <Dashboard handleTabChange={handleTabChange} />
                         </div>
-                        <div
-                            icon='IcBotBuilderTabIcon'
-                            label={<Localize i18n_default_text='Bot Builder' />}
-                            id='id-bot-builder'
-                        />
+                        {/* @ts-ignore */}
+                        <div icon='IcBotBuilderTabIcon' label={localize('Bot Builder')} id='id-bot-builder' />
+                        {/* @ts-ignore */}
                         <div
                             icon='IcChartsTabDbot'
-                            label={<Localize i18n_default_text='Charts' />}
+                            label={localize('Charts')}
                             id={
                                 is_chart_modal_visible || is_trading_view_modal_visible
                                     ? 'id-charts--disabled'
@@ -177,11 +166,8 @@ const AppWrapper = observer(() => {
                         >
                             <Chart show_digits_stats={false} />
                         </div>
-                        <div
-                            icon='IcTutorialsTabs'
-                            label={<Localize i18n_default_text='Tutorials' />}
-                            id='id-tutorials'
-                        >
+                        {/* @ts-ignore */}
+                        <div icon='IcTutorialsTabs' label={localize('Tutorials')} id='id-tutorials'>
                             <div className='tutorials-wrapper'>
                                 <Tutorial handleTabChange={handleTabChange} />
                             </div>
@@ -212,7 +198,7 @@ const AppWrapper = observer(() => {
                 has_close_icon
                 is_mobile_full_width={false}
                 is_visible={is_dialog_open}
-                onCancel={onCancelButtonClick}
+                onCancel={onCancelButtonClick || undefined}
                 onClose={onCloseDialog}
                 onConfirm={onOkButtonClick || onCloseDialog}
                 portal_element_id='modal_root'

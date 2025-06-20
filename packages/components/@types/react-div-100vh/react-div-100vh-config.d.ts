@@ -1,12 +1,10 @@
 declare module 'react-div-100vh' {
-    export default function Div100vh(
-        props: React.PropsWithChildren<{
-            className?: string;
-            id?: string;
-            style: {
-                height?: string;
-                maxHeight?: string;
-            };
-        }>
-    ): JSX.Element;
+    import * as React from 'react';
+
+    interface Div100vhProps extends React.HTMLAttributes<HTMLDivElement> {
+        children?: React.ReactNode;
+    }
+
+    const Div100vh: React.FC<Div100vhProps>;
+    export default Div100vh;
 }

@@ -168,8 +168,7 @@ module.exports = function (env) {
                 },
                 {
                     test: /\.svg$/,
-                    exclude: [/node_modules/, path.resolve('../', 'wallets')],
-                    include: /public\//,
+                    include: path.resolve(__dirname, 'src/public'),
                     type: 'asset/resource',
                     generator: {
                         filename: 'appstore/public/[name].[contenthash][ext]',
@@ -177,7 +176,7 @@ module.exports = function (env) {
                 },
                 {
                     test: /\.svg$/,
-                    exclude: /node_modules|public\//,
+                    exclude: [/node_modules/, path.resolve(__dirname, 'src/public')],
                     use: svg_loaders,
                 },
             ],
