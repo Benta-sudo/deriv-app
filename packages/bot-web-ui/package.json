@@ -74,7 +74,8 @@
         "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^9.0.5",
-        "stylelint-no-unsupported-browser-features": "^5.0.1"
+        "stylelint-no-unsupported-browser-features": "^5.0.1",
+        "html-webpack-plugin": "^5.5.0"
     },
     "dependencies": {
         "@deriv-com/quill-ui": "1.24.4",
