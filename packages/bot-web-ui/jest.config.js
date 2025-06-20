@@ -16,6 +16,6 @@ module.exports = {
     },
     collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/node_modules/**'],
     globals: {
-        __webpack_public_path__: '/',
+        __webpack_public_path__: './',
     },
 };

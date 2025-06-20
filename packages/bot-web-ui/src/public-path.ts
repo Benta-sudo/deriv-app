@@ -76,4 +76,4 @@ const initSurvicate = () => {
 
 export { initSurvicate, initSurvicateCalled };
 
-setBotPublicPath(getUrlBase('/'));
+setBotPublicPath(getUrlBase('./'));

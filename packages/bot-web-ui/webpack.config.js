@@ -28,7 +28,7 @@ module.exports = function (env) {
         entry: [path.join(__dirname, 'src', 'app', 'index.ts')],
         output: {
             ...output,
-            publicPath: base,
+            publicPath: './',
         },
         devServer: {
             static: {
@@ -142,6 +142,11 @@ module.exports = function (env) {
                     {
                         from: path.resolve(__dirname, '../../', 'node_modules/@deriv/bot-skeleton/dist/media'),
                         to: 'bot/media',
+                    },
+                    {
+                        from: path.resolve(__dirname, 'src', 'favicon.ico'),
+                        to: path.resolve(__dirname, 'dist', 'favicon.ico'),
+                        noErrorOnMissing: true,
                     },
                 ],
             }),
